@@ -35,8 +35,8 @@ jobs:
       - name: Install node.js packages
         run: npm install
 
-      - name: Etape supplementaire
-        run: chmod +x mvnw && npm run ci:backend:tes
+#       - name: Etape supplementaire
+#         run: chmod +x mvnw && npm run ci:backend:tes
 
       - name: Etape supplementaire
         run: npm run ci:frontend:test
