@@ -47,11 +47,6 @@ jobs:
       - name: create bdd
         run: npm run ci:e2e:prepare:docker
         
-      - name: create bdd
-        run: npm run ci:e2e:prepare:docker
-        
-      - name: create bdd
-        run: npm run ci:e2e:prepare:docker
       
       - name: Run a one-line script
         run: npm run ci:e2e:teardown
