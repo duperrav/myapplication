@@ -32,24 +32,24 @@ jobs:
           java-version: '11.x'
 
       # Runs a single command using the runners shell
-    #  - name: Install node.js packages
-    #   run: npm install
+      - name: Install node.js packages
+        run: npm install
 
-    #  - name: Etape supplementaire
-    #   run: chmod +x mvnw && npm run ci:backend:tes
+      - name: Etape supplementaire
+        run: chmod +x mvnw && npm run ci:backend:tes
 
-    # - name: Etape supplementaire
-    #  run: npm run ci:frontend:test
+      - name: Etape supplementaire
+        run: npm run ci:frontend:test
       
-      - name: prepare.jar
-        run: mvn -ntp verify -DskipTests --batch-mode "-Pprod" "-Pe2e" "-Denforcer.skip=true"      
+      #- name: prepare.jar
+      #  run: mvn -ntp verify -DskipTests --batch-mode "-Pprod" "-Pe2e" "-Denforcer.skip=true"      
       
-      - name: create bdd
-        run: npm run ci:e2e:prepare:docker
+      #- name: create bdd
+      #  run: npm run ci:e2e:prepare:docker
         
       
-      - name: Run a one-line script
-        run: npm run ci:e2e:teardown
+      #- name: Run a one-line script
+      #  run: npm run ci:e2e:teardown
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
